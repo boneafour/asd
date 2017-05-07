@@ -37,7 +37,7 @@ public class Subject extends Activity implements View.OnClickListener{
         btnSave = (Button) findViewById(R.id.btnSave);
         btnSave.setOnClickListener(this);
 
-        etName = (EditText) findViewById(R.id.studentName);
+        etName = (EditText) findViewById(R.id.subject);
         etCommentSubject = (EditText) findViewById(R.id.comSubject);
 
     }
@@ -62,7 +62,7 @@ public class Subject extends Activity implements View.OnClickListener{
             db.addSubject(new SubjectData(stFullName, stCommentSubject));
             List<SubjectData> subjects = db.getAllSubjects();
             for (SubjectData cn : subjects) {
-                String log = "Id: " + cn.getSubjectID() + " ,Names: " + cn.getSubjectName() + " ,Comment: " + cn.getSubjectComment();
+                String log = "Id: " + cn.getSubjectID() + " ,Names: " + cn.getSubjectName() + " ,Group: " + cn.getSubjectComment();
                 Log.d("Name: ", log);
             }
             break;

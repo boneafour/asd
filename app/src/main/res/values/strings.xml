@@ -1,9 +1,9 @@
 <resources>
-    <string name="app_name">МУИТ</string>
-    <string name="main">МУИТ</string>
+    <string name="app_name">KazSeminar</string>
+    <string name="main">KazSeminar</string>
     <string-array name="type">
         <item>преподаватель</item>
-        <item>студент</item>
+        <item>ученик</item>
     </string-array>
     <string name="parol">Пароль</string>
     <string name="loginB">Войти</string>
@@ -12,11 +12,11 @@
     <string name="subject">Предметы</string>
     <string name="calendar">Календарь</string>
     <string name="teacher">Преподаватель</string>
-    <string name="student">Студент</string>
+    <string name="student">Ученик</string>
     <string name="save">Сохранить</string>
     <string name="fullName">ФИО:</string>
     <string name="phoneNumber">Номер телефона:</string>
-    <string name="comment">Комментарии:</string>
+    <string name="comment">Группа:</string>
     <string name="name">Название:</string>
     <string name="data">Дата</string>
     <string name="time">Время</string>
@@ -27,11 +27,11 @@
     <string name="report">Отчет</string>
     <string name="topic">Тема:</string>
     <string name="commentTeacher">Комментарии для преподавателей:</string>
-    <string name="commentStudent">Комментарии для студента:</string>
+    <string name="commentStudent">Комментарии для ученика:</string>
     <string name="alert_dialog_title">Выберите критерии</string>
     <string-array name="languages">
         <item>Преподаватель</item>
-        <item>Студент</item>
+        <item>Ученик</item>
         <item>Название</item>
         <item>Предмет</item>
         <item>Тема</item>

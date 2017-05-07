@@ -20,12 +20,9 @@ public class ReportListAdapter extends BaseAdapter implements View.OnClickListen
     ArrayList<String> arTopic;
     ArrayList<String> arDate;
     ArrayList<String> arTime;
-    ArrayList<String> arCommentStudent;
-    ArrayList<String> arCommentTeacher;
-    ArrayList<String> arCheck;
 
 
-    public ReportListAdapter(Activity context, ArrayList<String> arName, ArrayList<String> arTeacher, ArrayList<String> arStudent, ArrayList<String> arSubject, ArrayList<String> arTopic, ArrayList<String> arDate, ArrayList<String> arTime, ArrayList<String> arCommentStudent, ArrayList<String> arCommentTeacher, ArrayList<String> arCheck) {
+    public ReportListAdapter(Activity context, ArrayList<String> arName, ArrayList<String> arTeacher, ArrayList<String> arStudent, ArrayList<String> arSubject, ArrayList<String> arTopic, ArrayList<String> arDate, ArrayList<String> arTime) {
         super();
         this.context = context;
         this.arName = arName;
@@ -35,9 +32,6 @@ public class ReportListAdapter extends BaseAdapter implements View.OnClickListen
         this.arTopic = arTopic;
         this.arDate = arDate;
         this.arTime = arTime;
-        this.arCommentStudent = arCommentStudent;
-        this.arCommentTeacher = arCommentTeacher;
-        this.arCheck = arCheck;
     }
 
     public int getCount() {
@@ -61,8 +55,7 @@ public class ReportListAdapter extends BaseAdapter implements View.OnClickListen
     }
 
     private class ViewHolder {
-        TextView tvName, tvTeacher, tvStudent, tvSubject, tvTopic, tvDate, tvTime, tvCommentStudent, tvCommentTeacher;
-        CheckBox cbCheck;
+        TextView tvName, tvTeacher, tvStudent, tvSubject, tvTopic, tvDate, tvTime;
     }
 
     public View getView(int position, View convertView, ViewGroup parent)
@@ -75,16 +68,13 @@ public class ReportListAdapter extends BaseAdapter implements View.OnClickListen
         {
             convertView = inflater.inflate(R.layout.activity_table_list, null);
             holder = new ViewHolder();
-            holder.tvName = (TextView) convertView.findViewById(R.id.studentName);
-            holder.tvTeacher = (TextView) convertView.findViewById(R.id.teacherName);
+            holder.tvName = (TextView) convertView.findViewById(R.id.subject1);
+            holder.tvTeacher = (TextView) convertView.findViewById(R.id.teacherSubject);
             holder.tvStudent = (TextView) convertView.findViewById(R.id.name);
-            holder.tvSubject = (TextView) convertView.findViewById(R.id.subjectName);
+            holder.tvSubject = (TextView) convertView.findViewById(R.id.subject);
             holder.tvTopic = (TextView) convertView.findViewById(R.id.topicName);
             holder.tvDate = (TextView) convertView.findViewById(R.id.date);
             holder.tvTime = (TextView) convertView.findViewById(R.id.lectureTime);
-            holder.tvCommentTeacher = (TextView) convertView.findViewById(R.id.commentTeacher);
-            holder.tvCommentStudent = (TextView) convertView.findViewById(R.id.mark);
-            holder.cbCheck = (CheckBox) convertView.findViewById(R.id.check);
             convertView.setTag(holder);
         }
         else
@@ -100,9 +90,6 @@ public class ReportListAdapter extends BaseAdapter implements View.OnClickListen
         holder.tvTopic.setText("Тема: "+arTopic.get(position));
         holder.tvDate.setText("Дата: "+arDate.get(position));
         holder.tvTime.setText("Время: "+arTime.get(position));
-        holder.tvCommentStudent.setText("Комментарии для студента: "+arCommentStudent.get(position));
-        holder.tvCommentTeacher.setText("Комментарии для преподавателя: "+arCommentTeacher.get(position));
-        holder.cbCheck.setText(arCheck.get(position));
 
         return convertView;
     }

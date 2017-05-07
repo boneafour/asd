@@ -28,64 +28,66 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/imageView2"
-        android:src="@drawable/picfornews1"
+        android:src="@drawable/newskz1"
         android:layout_below="@+id/app_bar"
-        android:layout_centerHorizontal="true"
-        android:layout_margin="5dp" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="Large Text"
-        android:id="@+id/name1"
-        android:layout_below="@+id/imageView2"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginLeft="8dp"
-        android:layout_marginRight="8dp"
-        android:layout_marginBottom="2dp" />
+        android:layout_alignParentStart="true" />
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="New Text"
-        android:id="@+id/new1"
-        android:layout_below="@+id/name1"
-        android:layout_alignLeft="@+id/name1"
-        android:layout_alignStart="@+id/name1"
-        android:layout_marginRight="8dp" />
+            <ImageView
+                android:id="@+id/imageView3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/newskz2"
+                android:layout_below="@+id/name1"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true" />
 
-    <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/imageView3"
-        android:layout_below="@+id/new1"
-        android:layout_centerHorizontal="true"
-        android:src="@drawable/picfornews2"
-        android:layout_margin="5dp" />
+            <ImageView
+                android:id="@+id/imageView4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/newskz3"
+                android:layout_below="@+id/textView6"
+                android:layout_alignLeft="@+id/textView6"
+                android:layout_alignStart="@+id/textView6"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true" />
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="Large Text"
-        android:id="@+id/name2"
-        android:layout_below="@+id/imageView3"
-        android:layout_alignLeft="@+id/new1"
-        android:layout_alignStart="@+id/new1"
-        android:layout_marginRight="8dp"
-        android:layout_marginBottom="2dp" />
+            <TextView
+                android:id="@+id/name1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/imageView2"
+                android:layout_marginBottom="2dp"
+                android:layout_marginLeft="8dp"
+                android:text="Г. ГАЛИЕВА - ПРЕДСЕДАТЕЛЬ МОЛОДЕЖНОГО МЕДИАСОЮЗА КАЗАХСТАНА ПРИ ВРУЧЕНИИ ГРАМОТЫ"
+                android:textAlignment="center"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true" />
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="New Text"
-        android:id="@+id/new2"
-        android:layout_below="@+id/name2"
-        android:layout_alignLeft="@+id/name2"
-        android:layout_alignStart="@+id/name2"
-        android:layout_marginRight="8dp" />
+            <TextView
+                android:id="@+id/textView6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:text="ВРУЧЕНИЕ ГРАМОТ УЧАСТНИКАМ КОНКУРСА АКИМОМ АЛМАЛИНСКОГО РАЙОНА М.У. ПРИНБЕТОВЫМ."
+                android:textAlignment="center"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:layout_below="@+id/imageView3"
+                android:layout_alignLeft="@+id/name1"
+                android:layout_alignStart="@+id/name1"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true" />
 
         </RelativeLayout>
     </ScrollView>

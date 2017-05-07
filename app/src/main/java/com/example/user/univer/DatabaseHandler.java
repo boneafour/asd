@@ -13,7 +13,7 @@ public class DatabaseHandler extends SQLiteOpenHelper {
 
 	// All Static variables
 	// Database Version
-	private static final int DATABASE_VERSION = 6;
+	private static final int DATABASE_VERSION = 10;
 
 	// Database Name
 	private static final String DATABASE_NAME = "contactsManager";

@@ -61,7 +61,7 @@ public class Lecture extends Activity implements View.OnClickListener{
 
         List<StudentData> students = db.getAllStudents();
         ArrayList<String> studentList = new ArrayList<String>();
-        studentList.add("Выберите студента:");
+        studentList.add("Выберите ученика:");
         for(StudentData cn : students){
             String s = cn.getStudentName();
             studentList.add(s);
@@ -82,15 +82,11 @@ public class Lecture extends Activity implements View.OnClickListener{
         spSubject.setAdapter(subjectList);
 
 
-        etName = (EditText) findViewById(R.id.studentName);
+        etName = (EditText) findViewById(R.id.fullName);
         etTopic = (EditText) findViewById(R.id.topic);
-        etCommentTeacher = (EditText) findViewById(R.id.comTeacher);
-        etCommentStudent = (EditText) findViewById(R.id.comStudent);
-        etCommentStudent.setEnabled(false);
-
         btnData = (Button) findViewById(R.id.data);
         btnData.setOnClickListener(this);
-        btnTime = (Button) findViewById(R.id.commentTeacher);
+        btnTime = (Button) findViewById(R.id.timeLecture);
         btnTime.setOnClickListener(this);
         btnBack = (ImageButton) findViewById(R.id.btnBack);
         btnBack.setOnClickListener(this);
@@ -110,7 +106,7 @@ public class Lecture extends Activity implements View.OnClickListener{
             case R.id.data:
                 showDialog(DIALOG_ID);
                 break;
-            case R.id.commentTeacher:
+            case R.id.timeLecture:
                 stDate = btnData.getText().toString();
                 Log.d("Name: ", stDate);
                 showDialog(DIALOG_TIME);
@@ -124,9 +120,9 @@ public class Lecture extends Activity implements View.OnClickListener{
                 stDate = btnData.getText().toString();
                 stTime = btnTime.getText().toString();
                 stTopic = "" + etTopic.getText();
-                stCommentTeacher = "" + etCommentTeacher.getText();
-                stCommentStudent = "" + etCommentStudent.getText();
-                stCheck = "Проверено";
+                stCommentTeacher = " ";
+                stCommentStudent = " ";
+                stCheck = " ";
 
                 db.addLecture(new LectureData(stName, stTeacher, stStudent, stSubject, stTopic, stDate, stTime, stCommentStudent, stCommentStudent, stCheck));
                 List<LectureData> lectures = db.getAllLecture();

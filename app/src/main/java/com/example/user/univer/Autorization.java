@@ -31,8 +31,9 @@ public class Autorization extends AppCompatActivity implements View.OnClickListe
 
         spType = (Spinner) findViewById(R.id.type);
         List<String> list = new ArrayList<String>();
-        list.add("Преподаватель");
-        list.add("Студент");
+        list.add("KazSeminar");
+        list.add("Гость");
+        list.add("Admin");
         ArrayAdapter<String> dataAdapter= new ArrayAdapter<String>(this, R.layout.activity_spinner, list);
         spType.setAdapter(dataAdapter);
         etParol = (EditText) findViewById(R.id.parol);
@@ -47,15 +48,19 @@ public class Autorization extends AppCompatActivity implements View.OnClickListe
                 stParol = etParol.getText().toString();
                 etParol.setText("");
                 stType=spType.getSelectedItem().toString();
-                if(stType.equals("Преподаватель")  && stParol.equals("12345")){
+                if(stType.equals("KazSeminar")  && stParol.equals("12345")){
                     Intent intent1 =new Intent(this, MainActivity.class);
                     startActivity(intent1);
                 }
-               else if(stType.equals("Студент")){
+               else if(stType.equals("Гость")){
                     Intent intent2 =new Intent(this, MainActivity1.class);
                     startActivity(intent2);
                 }
-                else if(stType.equals("Преподаватель") && ( stParol.equals(""))){
+                else if(stType.equals("Admin")  && stParol.equals("admin")){
+                    Intent intent3 =new Intent(this, MainActivity3.class);
+                    startActivity(intent3);
+                }
+                else if(stType.equals("KazSeminar") && ( stParol.equals(""))){
                     Toast.makeText(Autorization.this, "Напишите пароль!", Toast.LENGTH_SHORT).show();
                 }
                 else{

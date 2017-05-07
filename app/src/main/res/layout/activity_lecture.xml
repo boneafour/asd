@@ -16,17 +16,16 @@
             android:layout_width="fill_parent"
             android:layout_height="fill_parent">
 
-    <EditText
-        android:id="@+id/studentName"
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:hint="@string/name"
-        style="@style/myCustomEditText"
-        android:layout_below="@+id/app_bar"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true" />
+            <EditText
+                android:id="@+id/fullName"
+                style="@style/myCustomEditText"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:hint="@string/name"
+                android:layout_marginTop="66dp"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true" />
 
     <Spinner
         android:id="@+id/teacher"
@@ -34,7 +33,7 @@
         android:layout_height="50dp"
         style="@style/myCustomEditText"
         android:entries="@array/type"
-        android:layout_below="@+id/studentName"
+        android:layout_below="@+id/fullName"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true" />
 
@@ -80,30 +79,12 @@
         android:layout_alignParentStart="true" />
 
     <Button
-        android:id="@+id/commentTeacher"
+        android:id="@+id/timeLecture"
         style="@style/myButton"
         android:text="@string/time"
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:layout_below="@+id/data"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
-    <EditText
-        android:id="@+id/comTeacher"
-        style="@style/myCustomEditText"
-        android:hint="@string/commentTeacher"
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:layout_below="@+id/commentTeacher"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
-    <EditText
-        android:id="@+id/comStudent"
-        style="@style/myCustomEditText"
-        android:hint="@string/commentStudent"
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:layout_below="@+id/comTeacher"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true" />
 

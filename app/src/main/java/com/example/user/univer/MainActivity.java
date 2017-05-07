@@ -38,6 +38,12 @@ public class MainActivity extends Activity {
                     startActivity(new Intent(MainActivity.this, MarkForTeacher.class));
                 }
                 else if(position==4){
+                    startActivity(new Intent(MainActivity.this, ListGroup.class));
+                }
+                else if(position==5){
+                    startActivity(new Intent(MainActivity.this, News.class));
+                }
+                /* else if(position==4){
                     startActivity(new Intent(MainActivity.this, Teacher.class));
                 }
                 else if (position==5){
@@ -54,7 +60,7 @@ public class MainActivity extends Activity {
                 }
                 else if(position==9){
                     startActivity(new Intent(MainActivity.this, AboutUs.class));
-                }
+                }*/
               }
 
             });

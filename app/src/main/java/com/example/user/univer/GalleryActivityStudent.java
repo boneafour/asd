@@ -26,22 +26,13 @@ public class GalleryActivityStudent extends Activity implements View.OnClickList
 
     private TextView txtTitle;
     private ImageButton btnBack;
-    private Button btnSave;
-
-    EditText etName,  etCommentSubject;
-    String stFullName, stCommentSubject;
 
     TextView name;
     Integer[] imageIDs = {
-            R.drawable.pic1,
-            R.drawable.pic2,
-            R.drawable.pic3,
-            R.drawable.pic4,
-            R.drawable.pic5,
-            R.drawable.pic6,
-            R.drawable.pic7,
-            R.drawable.picfornews1,
-            R.drawable.picfornews2
+            R.drawable.like1,
+            R.drawable.like2,
+            R.drawable.like3,
+            R.drawable.like4
     };
 
     @Override
@@ -63,32 +54,18 @@ public class GalleryActivityStudent extends Activity implements View.OnClickList
             public void onItemClick(AdapterView<?> parent, View v, int position,long id)
             {
                 if(position==0){
-                    name.setText("Международный IT Университет");
+                    name.setText("Награда за помощь в преведении конкурса знатоков казахского");
                 }
                 else if(position==1){
-                    name.setText("проект «3D Принтер»");
+                    name.setText("Благодарственное письмо акима Алмалинского района Принбекова М.У.");
                 }
                 else if(position==2){
-                    name.setText("На встрече с компаниями KCELL, Нурсат, Казтелерадио, ТрансТелеком");
+                    name.setText("Рекомендательное письмо от банка АТФ за обучение");
                 }
                 else if(position==3){
-                    name.setText("Студенты МУИТ — чемпионы Казахстана по программированию");
+                    name.setText("Рекомендательное письмо от Специализированного межрайонного административного суда г. Алматы");
                 }
-                else if(position==4){
-                    name.setText("Лига IT Университета");
-                }
-                else if(position==5){
-                    name.setText("Карим Ринат вместе «Вычислительная Техника и Программное обеспечение»");
-                }
-                else if(position==6){
-                    name.setText("Представители компании «Huawei Kazakhstan» посетили Международный IT Университет.");
-                }
-                else if(position==7){
-                    name.setText("Встреча с казахстанским космонавтом Айдыном Аимбетовым");
-                }
-                else if(position==8){
-                    name.setText("Ярмарка вакансий");
-                }
+
                 // display the images selected
                 ImageView imageView = (ImageView) findViewById(R.id.image1);
                 imageView.setImageResource(imageIDs[position]);
@@ -105,22 +82,6 @@ public class GalleryActivityStudent extends Activity implements View.OnClickList
                 NavUtils.navigateUpFromSameTask(this);
             break;
 
-            case R.id.btnSave:
-                stFullName = "" + etName.getText();
-                etName.setText("");
-                stCommentSubject = "" + etCommentSubject.getText();
-                etCommentSubject.setText("");
-                System.out.println(stFullName);
-                System.out.println(stCommentSubject);
-
-            DatabaseHandler db = new DatabaseHandler(this);
-            db.addSubject(new SubjectData(stFullName, stCommentSubject));
-            List<SubjectData> subjects = db.getAllSubjects();
-            for (SubjectData cn : subjects) {
-                String log = "Id: " + cn.getSubjectID() + " ,Names: " + cn.getSubjectName() + " ,Comment: " + cn.getSubjectComment();
-                Log.d("Name: ", log);
-            }
-            break;
     }
 
     }

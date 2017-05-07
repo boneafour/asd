@@ -21,8 +21,8 @@ public class Student extends Activity implements View.OnClickListener {
     private ImageButton btnBack;
     private Button btnSave;
 
-    EditText etFullName, etPhoneNumber, etCommentStudent;
-    String stFullName, stPhoneNumber, stCommentStudent;
+    EditText etFullName, etPhoneNumber, etGroupStudent;
+    String stFullName, stPhoneNumber, stGroupStudent;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,9 +37,9 @@ public class Student extends Activity implements View.OnClickListener {
         btnSave = (Button) findViewById(R.id.btnSave);
         btnSave.setOnClickListener(this);
 
-        etFullName = (EditText) findViewById(R.id.studentName);
+        etFullName = (EditText) findViewById(R.id.subject);
         etPhoneNumber = (EditText) findViewById(R.id.phoneNumber);
-        etCommentStudent = (EditText) findViewById(R.id.comStudent);
+        etGroupStudent = (EditText) findViewById(R.id.groupStudent);
 
     }
 
@@ -55,14 +55,14 @@ public class Student extends Activity implements View.OnClickListener {
                 etFullName.setText("");
                 stPhoneNumber = "" + etPhoneNumber.getText();
                 etPhoneNumber.setText("");
-                stCommentStudent = "" + etCommentStudent.getText();
-                etCommentStudent.setText("");
+                stGroupStudent = "" + etGroupStudent.getText();
+                etGroupStudent.setText("");
 
                 DatabaseHandler db = new DatabaseHandler(this);
-                db.addStudent(new StudentData(stFullName, stPhoneNumber, stCommentStudent));
+                db.addStudent(new StudentData(stFullName, stPhoneNumber, stGroupStudent));
                 List<StudentData> students = db.getAllStudents();
                 for (StudentData cn : students) {
-                    String log = "Id: "+cn.getStudentID()+" ,Name: " + cn.getStudentName() + " ,Phone: " + cn.getStudentPhone()+" ,Comment: " + cn.getStudentComment();
+                    String log = "Id: "+cn.getStudentID()+" ,Name: " + cn.getStudentName() + " ,Phone: " + cn.getStudentPhone()+" ,Group: " + cn.getStudentComment();
                     Log.d("Name: ", log);
                 }
                 break;

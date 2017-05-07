@@ -24,8 +24,8 @@ public class Teacher extends Activity implements View.OnClickListener {
     private ImageButton btnBack;
     private Button btnSave;
     DatabaseHandler db = new DatabaseHandler(this);
-    EditText etFullName, etPhoneNumber, etCommentTeacher;
-    String stFullName, stPhoneNumber, stCommentTeacher, stSubject;
+    EditText etFullName, etPhoneNumber, etGroupTeacher;
+    String stFullName, stPhoneNumber, stGroupTeacher, stSubject;
     Spinner spSubject;
 
 
@@ -39,7 +39,7 @@ public class Teacher extends Activity implements View.OnClickListener {
 
         List<SubjectData> subject = db.getAllSubjects();
         ArrayList<String> roleList = new ArrayList<String>();
-        roleList.add("Выберите преподавателя:");
+        roleList.add("Выберите предмета:");
         for(SubjectData cn : subject){
             String s = cn.getSubjectName();
             roleList.add(s);
@@ -53,9 +53,9 @@ public class Teacher extends Activity implements View.OnClickListener {
         btnSave = (Button) findViewById(R.id.btnSave);
         btnSave.setOnClickListener(this);
 
-        etFullName = (EditText) findViewById(R.id.studentName);
+        etFullName = (EditText) findViewById(R.id.teacherName);
         etPhoneNumber = (EditText) findViewById(R.id.phoneNumber);
-        etCommentTeacher = (EditText) findViewById(R.id.comTeacher);
+        etGroupTeacher = (EditText) findViewById(R.id.groupTeacher);
     }
 
     @Override
@@ -71,14 +71,14 @@ public class Teacher extends Activity implements View.OnClickListener {
                 stSubject = "" + spSubject.getSelectedItem().toString();
                 stPhoneNumber = "" + etPhoneNumber.getText();
                 etPhoneNumber.setText("");
-                stCommentTeacher = "" + etCommentTeacher.getText();
-                etCommentTeacher.setText("");
+                stGroupTeacher = "" + etGroupTeacher.getText();
+                etGroupTeacher.setText("");
 
                 DatabaseHandler db = new DatabaseHandler(this);
-                db.addTeacher(new TeacherData(stFullName, stSubject, stPhoneNumber, stCommentTeacher));
+                db.addTeacher(new TeacherData(stFullName, stSubject, stPhoneNumber, stGroupTeacher));
                 List<TeacherData> teachers = db.getAllTeachers();
                 for (TeacherData cn : teachers) {
-                    String log = "Id: "+cn.getTeacherID()+" ,Name: " + cn.getTeacherName() + " ,Subject: " + cn.getTeacherSubject() + " ,Phone: " + cn.getTeacherPhone()+" ,Comment: " + cn.getTeacherComment();
+                    String log = "Id: "+cn.getTeacherID()+" ,Name: " + cn.getTeacherName() + " ,Subject: " + cn.getTeacherSubject() + " ,Phone: " + cn.getTeacherPhone()+" ,Group: " + cn.getTeacherComment();
                     Log.d("Name: ", log);
                 }
                 break;

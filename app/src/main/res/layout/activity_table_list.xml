@@ -6,7 +6,7 @@
     android:layout_height="match_parent">
 
     <TextView
-        android:id="@+id/studentName"
+        android:id="@+id/subject1"
         android:text="Не заполнено "
         android:layout_height="wrap_content"
         android:layout_width="fill_parent"
@@ -15,10 +15,10 @@
 
     <TextView
         android:text="Не заполнено "
-        android:id="@+id/teacherName"
+        android:id="@+id/teacherSubject"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/studentName"
+        android:layout_below="@+id/subject1"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true">
     </TextView>
@@ -28,23 +28,16 @@
         android:id="@+id/name"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/teacherName"
+        android:layout_below="@+id/teacherSubject"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true">
     </TextView>
 
-    <TextView
-        android:text="Не заполнено "
-        android:id="@+id/commentTeacher"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/lectureTime"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
+
 
     <TextView
         android:text="Не заполнено "
-        android:id="@+id/subjectName"
+        android:id="@+id/subject"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/name"
@@ -55,7 +48,7 @@
         android:id="@+id/topicName"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/subjectName"
+        android:layout_below="@+id/subject"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true" />
     <TextView
@@ -64,8 +57,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/topicName"
-        android:layout_alignRight="@+id/commentTeacher"
-        android:layout_alignEnd="@+id/commentTeacher" />
+        android:layout_alignRight="@+id/timeLecture"
+        android:layout_alignEnd="@+id/timeLecture" />
     <TextView
         android:text="Не заполнено "
         android:id="@+id/lectureTime"
@@ -75,23 +68,7 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true" />
 
-    <TextView
-        android:text="Не заполнено "
-        android:id="@+id/mark"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/commentTeacher"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
 
-    <CheckBox
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Проверено"
-        android:id="@+id/check"
-        android:layout_below="@+id/mark"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:checked="false" />
+
 
 </RelativeLayout>

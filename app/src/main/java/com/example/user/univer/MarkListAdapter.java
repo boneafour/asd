@@ -5,7 +5,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
-import android.widget.CheckBox;
 import android.widget.TextView;
 
 import java.util.ArrayList;
@@ -64,10 +63,10 @@ public class MarkListAdapter extends BaseAdapter implements View.OnClickListener
         {
             convertView = inflater.inflate(R.layout.activity_mark_list, null);
             holder = new ViewHolder();
-            holder.tvTeacher = (TextView) convertView.findViewById(R.id.teacherName);
+            holder.tvTeacher = (TextView) convertView.findViewById(R.id.teacherSubject);
             holder.tvStudent = (TextView) convertView.findViewById(R.id.name);
-            holder.tvSubject = (TextView) convertView.findViewById(R.id.subjectName);
-            holder.tvName = (TextView) convertView.findViewById(R.id.studentName);
+            holder.tvSubject = (TextView) convertView.findViewById(R.id.subject);
+            holder.tvName = (TextView) convertView.findViewById(R.id.subject1);
             holder.tvMark = (TextView) convertView.findViewById(R.id.mark);
             convertView.setTag(holder);
         }

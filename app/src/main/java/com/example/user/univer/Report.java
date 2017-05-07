@@ -24,7 +24,7 @@ public class Report extends Activity implements View.OnClickListener {
     ListView lv;
     ReportListAdapter lvAdapter;
     DatabaseHandler db = new DatabaseHandler(this);
-    ArrayList<String> arName, arTeacher, arStudent, arSubject, arTopic, arDate, arTime, arCommentStudent, arCommentTeacher, arCheck ;
+    ArrayList<String> arName, arTeacher, arStudent, arSubject, arTopic, arDate, arTime;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -45,9 +45,6 @@ public class Report extends Activity implements View.OnClickListener {
         arTopic = new ArrayList<String>();
         arDate = new ArrayList<String>();
         arTime = new ArrayList<String>();
-        arCommentStudent = new ArrayList<String>();
-        arCommentTeacher = new ArrayList<String>();
-        arCheck = new ArrayList<String>();
 
         List<LectureData> lecture = db.getAllLecture();
         for (LectureData cn : lecture) {
@@ -65,15 +62,9 @@ public class Report extends Activity implements View.OnClickListener {
             arDate.add(stDate);
             String stTime = cn.getLectureTime();
             arTime.add(stTime);
-            String stCommentStudent = cn.getLectureStudentComment();
-            arCommentStudent.add(stCommentStudent);
-            String stCommentTeacher = cn.getLectureTeacherComment();
-            arCommentTeacher.add(stCommentTeacher);
-            String stCheck = cn.getLectureCheck();
-            arCheck.add(stCheck);
 
             lv = (ListView) findViewById(R.id.listView);
-            lvAdapter = new ReportListAdapter(this, arName, arTeacher, arStudent, arSubject, arTopic, arDate, arTime, arCommentStudent, arCommentTeacher, arCheck);
+            lvAdapter = new ReportListAdapter(this, arName, arTeacher, arStudent, arSubject, arTopic, arDate, arTime);
             lv.setAdapter(lvAdapter);
             lv.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
                 @Override

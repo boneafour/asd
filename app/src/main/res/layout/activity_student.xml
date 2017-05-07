@@ -12,7 +12,7 @@
         android:layout_width="wrap_content"
         android:layout_height="50dp"
         style="@style/myCustomEditText"
-        android:id="@+id/studentName"
+        android:id="@+id/subject"
         android:hint="@string/fullName"
         android:layout_below="@+id/app_bar"
         android:layout_alignParentLeft="true"
@@ -22,11 +22,11 @@
 
 
     <EditText
-        android:id="@+id/comStudent"
+        android:id="@+id/groupStudent"
         style="@style/myCustomEditText"
-        android:hint="@string/comment"
         android:layout_width="match_parent"
         android:layout_height="50dp"
+        android:hint="@string/comment"
         android:layout_below="@+id/phoneNumber"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true" />
@@ -51,7 +51,7 @@
         android:inputType="number"
         android:ems="10"
         android:id="@+id/phoneNumber"
-        android:layout_below="@+id/studentName"
+        android:layout_below="@+id/subject"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true" />
 

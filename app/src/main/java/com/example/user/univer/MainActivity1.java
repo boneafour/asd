@@ -20,40 +20,31 @@ public class MainActivity1 extends Activity {
         txtTitle.setText(getString(R.string.main));
 
         GridView gridview = (GridView) findViewById(R.id.grid);
-        gridview.setAdapter(new ImageAdapter(this));
+        gridview.setAdapter(new ImageAdapter1(this));
         gridview.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             public void onItemClick(AdapterView<?> parent, View v,
                                     int position, long id) {
 
               if(position==0){
-                    startActivity(new Intent(MainActivity1.this, LectureStudent.class));
+                    startActivity(new Intent(MainActivity1.this, ListTeacher.class));
                     }
                 else if (position==1){
-                    startActivity(new Intent(MainActivity1.this, ReportStudent.class));
+                    startActivity(new Intent(MainActivity1.this, ListSubject.class));
                 }
                 else if(position==2){
-                    startActivity(new Intent(MainActivity1.this, CalendarStudent.class));
-                }
-                else if(position==3){
-                    startActivity(new Intent(MainActivity1.this, MarkForStudent.class));
-                }
-                else if(position==4){
-                //    startActivity(new Intent(MainActivity1.this, Teacher.class));
-                }
-                else if (position==5){
-                    startActivity(new Intent(MainActivity1.this, Student.class));
-                }
-                else if(position==6){
-                //    startActivity(new Intent(MainActivity1.this, Subject.class));
-                }
-                else if(position==7){
-                    startActivity(new Intent(MainActivity1.this, NewsStudent.class));
-                }
-                else if(position==8){
                     startActivity(new Intent(MainActivity1.this, GalleryActivityStudent.class));
                 }
-                else if(position==9){
-                    startActivity(new Intent(MainActivity1.this, AboutUsStudent.class));
+                else if(position==3){
+                    startActivity(new Intent(MainActivity1.this, NewsStudent.class));
+                }
+                else if (position==4){
+                    startActivity(new Intent(MainActivity1.this, Likes.class));
+                }
+                else if(position==5){
+                    startActivity(new Intent(MainActivity1.this, Contacts.class));
+                }
+                else if(position==6){
+                    startActivity(new Intent(MainActivity1.this, AboutUs.class));
                 }
               }
 

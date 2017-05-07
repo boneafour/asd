@@ -4,7 +4,7 @@
 
     <application
         android:allowBackup="true"
-        android:icon="@drawable/logo"
+        android:icon="@drawable/logo2"
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme" >
@@ -27,11 +27,52 @@
         </activity>
 
         <activity
+            android:name="MainActivity3"
+            android:screenOrientation="portrait">
+        </activity>
+
+        <activity
             android:name=".Lecture"
             android:screenOrientation="portrait">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".MainActivity" />
+        </activity>
+        <activity
+            android:name=".ListGroup"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainActivity" />
+        </activity>
+        <activity
+            android:name=".ListTeacher"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainActivity1" />
+        </activity>
+
+        <activity
+            android:name=".ListSubject"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainActivity1" />
+        </activity>
+        <activity
+            android:name=".Likes"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainActivity1" />
+        </activity>
+        <activity
+            android:name=".Contacts"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainActivity1" />
         </activity>
         <activity
             android:name=".Report"
@@ -45,21 +86,21 @@
             android:screenOrientation="portrait">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value=".MainActivity" />
+                android:value=".MainActivity3" />
         </activity>
         <activity
             android:name=".Student"
             android:screenOrientation="portrait">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value=".MainActivity1" />
+                android:value=".MainActivity3" />
         </activity>
         <activity
             android:name=".Subject"
             android:screenOrientation="portrait">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value=".MainActivity" />
+                android:value=".MainActivity3" />
         </activity>
         <activity
             android:name=".Search"
@@ -99,13 +140,6 @@
         </activity>
         <activity
             android:name=".GalleryActivityStudent"
-            android:screenOrientation="portrait">
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value=".MainActivity1" />
-        </activity>
-        <activity
-            android:name=".LectureStudent"
             android:screenOrientation="portrait">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
@@ -153,14 +187,6 @@
         </activity>
 
         <activity
-            android:name=".AboutUsStudent"
-            android:screenOrientation="portrait">
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value=".MainActivity1" />
-        </activity>
-
-        <activity
             android:name=".CalenderActivityStudent"
             android:screenOrientation="portrait">
             <meta-data
@@ -174,7 +200,7 @@
             android:screenOrientation="portrait">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value=".MainActivity" />
+                android:value=".MainActivity1" />
         </activity>
 
 
